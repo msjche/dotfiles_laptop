@@ -104,7 +104,7 @@ URxvt.letterSpace: -1
 !URxvt.boldFont: xft:Ubuntu Mono derivative Powerline Bold:pixelsize=16:antialias=true:hinting=true
 !URxvt.italicFont: xft:Ubuntu Mono derivative Powerline Italic:pixelsize=16:antialias=true:hinting=true
 !URxvt.boldItalicFont: xft:Ubuntu Mono derivative Bold Italic:pixelsize=16:antialias=true
-!URxvt.letterSpace: -1
+!!URxvt.letterSpace: -1
 
 
 !URxvt.font: 	xft: Anonymice Powerline:pixelsize=17:anialias=true
