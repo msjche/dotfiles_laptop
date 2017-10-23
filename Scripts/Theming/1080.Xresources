@@ -1,0 +1,108 @@
+URxvt.urgentOnBell: off
+URxvt.visualBell: off
+URxvt.iso14755: off
+URxvt.iso14755_52: off
+URxvt.meta8: true
+URxvt.depth: 32
+URxvt.iconFile: /usr/share/icons/Humanity/apps/128/utilities-terminal.svg
+URxvt.metaSendsEscape: truee
+
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
+
+URxvt.scrollBar: off
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.cursorColor:#757575
+URxvt.saveLines: 10000
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
+
+urxvt*depth:32
+urxvt*foreground:#ADADAD
+urxvt*background:rgba:0600/0600/0600/dddd
+URxvt.foreground: 15
+URxvt.geometry: 128x38
+
+!Droid Sans
+URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=12:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=12:antialias=true
+!! Monofur
+!URxvt.font: xft:Monofur for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont: xft:Monofur Bold for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont: xft:Monofur Italic for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Monofur Bold for Powerline:italic:pixelsize=17:antialias=true
+!! Anonymice
+!URxvt.font: xft:Anonymice Powerline:pixelsize=21:antialias=true:hinting=true
+!URxvt.boldFont: xft:Anonymice Powerline Bold:pixelsize=21:antialias=true:hinting=true
+!URxvt.italicFont: xft:Anonymice Powerline Italic:pixelsize=21:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Anonymice Bold Italic:pixelsize=21:antialias=true
+
+!URxvt.font: 	xft: Anonymice Powerline:pixelsize=17:anialias=true
+!		xft: DejaVu Sans Mono for Powerline:pixelsize=12:anialias=true
+!		xft: Digital Readout Thick UprightPowerline:pixelsize=17:anialias=true
+!		xft: Droid Sans Mono for Powerline:pixelsize=12:anialias=true
+!		xft: FuraMono-Regular Powerline:pixelsize=17:anialias=true
+!		xft: Inconsolata for Powerline:pixelsize=17:anialias=true
+!		xft: Literation Mono Powerline:pixelsize=17:anialias=true
+!		xft: Meslo L DZ Regular for Powerline:pixelsize=17:anialias=true
+!		xft: Monofur for Powerline:pixelsize=17:anialias=true
+!		xft: Sauce Code Powerline Medium:pixelsize=17:anialias=true
+!		xft: Ubuntu Mono derivative Powerline:pixelsize=17:anialias=true
+
+
+URxvt.letterSpace: -1
+
+! Disable screen printing by overriding the default print pipe.
+URxvt.print-pipe: "cat >/dev/null"
+
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+
+URxvt.keysym.M-x           	: perl:keyboard-select:activate
+URxvt.keysym.M-u           	: perl:url-select:select_next
+URxvt.keysym.M-c           	: perl:clipboard:copy
+URxvt.keysym.M-v           	: perl:clipboard:paste
+URxvt.keysym.M-s           	: perl:keyboard-select:search
+URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
+!URxvt.perl-ext-common     	: tabbed,default,matcher
+Urxvt.perl-lib            	: /usr/lib/urxvt/perl/
+URxvt.url-select.launcher  	: dwb
+URxvt.url-select.autocopy  	: true
+URxvt.url-select.underline 	: true
+
+URxvt.url-select.button:   1
+
+URxvt.clipboard.copycmd:  xsel --input  --clipboard
+URxvt.clipboard.pastecmd: xsel --output --clipboard
+
+!URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+!URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+
+! Black
+URxvt.color0:  #000000
+URxvt.color8:  #4c4c4c
+! Red
+URxvt.color1:  #cd0000
+URxvt.color9:  #ff0000
+! Green
+URxvt.color2:  #00cd00
+URxvt.color10: #00ff00
+! Yellow
+URxvt.color3:  #cdcd00
+URxvt.color11: #ffff00
+! Blue
+URxvt.color4:  #1e90ff
+URxvt.color12: #4682b4
+! Magenta
+URxvt.color5:  #cd00cd
+URxvt.color13: #ff00ff
+! Cyan
+URxvt.color6:  #00cdcd
+URxvt.color14: #00ffff
+! White
+URxvt.color7:  #cfcfcf
+URxvt.color15: #a8a8a8
+

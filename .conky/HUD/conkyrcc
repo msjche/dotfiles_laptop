@@ -1,0 +1,117 @@
+######################
+# - Conky settings - #
+######################
+update_interval 2
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 2
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Droid Sans:size=13
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window yes
+own_window_type desktop
+own_window_hints below,skip_taskbar,skip_pager
+
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 10
+
+alignment top_middle
+gap_y 39
+gap_x 0
+border_inner_margin 8
+draw_outline no
+draw_borders no
+
+minimum_size 1400 1200
+maximum_width 1400
+maximum_height 1200
+
+default_bar_size 250 10
+draw_bar_borders no
+
+default_color DEDEDE
+color1 1793D0
+color2 8C8C8C
+color3 ABABAB
+color4 C9C9C9
+color5 DEDEDE
+color6 757575
+color7 EB8F8F
+
+TEXT
+${alignc 183}${font xirod:size=37}${color}ARCH${color1} LINUX$color$font
+
+# News
+# Left aligned
+${font xirod:Bold:size=14}${color1}NEWS FEEDS ${hr 2}$color${font}
+
+${font Droid Sans:Bold:size=12}${color1}LINUX NEWS ${color1} _______________________________________________________________________________________$font$color
+
+${goto 20}${color6}Arch Linux News$color
+${rss https://www.archlinux.org/feeds/news/ 1 item_titles 5 }
+
+${goto 20}${color6}Arch Linux Package Updates$color
+${rss https://www.archlinux.org/feeds/packages/ 1 item_titles 5 }
+
+${goto 20}${color6}WebUpd8$color
+${rss http://feeds2.feedburner.com/webupd8 1 item_titles 5 }
+
+${font Droid Sans:Bold:size=12}${color1}FINANCIAL NEWS __________________________________________________________________________________$font$color
+
+${goto 20}${color6}ZeroHedge$color
+${rss http://feeds.feedburner.com/zerohedge/feed?format=xml 1 item_titles 9}
+
+${goto 20}${color6}Drudge Report$color
+${rss http://feeds.feedburner.com/zerohedge/feed?format=xml 1 item_titles 9}
+
+${goto 20}${color6}Seeking Alpha$color
+${rss http://seekingalpha.com/listing/most-popular-articles.xml 1 item_titles 5}
+# Right aligned
+${voffset -1082}
+${font Droid Sans:Bold:size=12}${alignr}${color1} __________________________________________________________________________ PODCASTS$font$color
+
+${alignr}${color6}Jupiter Broadcasting   $color
+${alignr}${rss http://feeds.feedburner.com/computeractionshowvideo 1 item_titles 1 }
+${alignr}${rss http://feeds.feedburner.com/linuxunvid 1 item_titles 1 }
+${alignr}${rss http://feedpress.me/t3mob 1 item_titles 1 }
+${alignr}${rss http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml 1 item_titles 1 }
+
+${alignr}${color6}Bad Voltage   $color
+${alignr}${rss http://www.badvoltage.org/feed/ogg/ 1 item_titles 1 }
+
+${alignr}${color6}Linux Game Cast   $color
+${alignr}${rss http://feeds.feedburner.com/LinuxGameCastLinuxgamecastWeeklyVideoHd 1 item_titles 1 }
+
+${alignr}${color6}Tom Woods   $color
+${alignr}${rss http://www.tomwoods.com/feed 1 item_titles 1 }
+
+${alignr}${color6}Startalk Radio   $color
+${alignr}${rss http://feeds.soundcloud.com/users/soundcloud:users:38128127/sounds.rss 1 item_titles 1 }
+
+${alignr}${color6}Joe Rogan Experience   $color
+${alignr}${rss http://joeroganexp.joerogan.libsynpro.com/irss 1 item_titles 1 }
+
+${alignr}${color6}Freedom Feens   $color
+${alignr}${rss http://www.freedomfeens.com/feed/ 1 item_titles 1 }
+
+#${voffset 500}${font xirod:Bold:size=14}${color7}TRANSMISSION TORRENTS ${hr 2}$color${font}
+
+#${color 2)${ Droid Sans:Bold:size=12}ID${goto 30}Process${goto 60}Name${goto 290}Up${goto 320}Down${goto 400}Status${goto 450}ETA ${color}
+#${color 2)${exec transmission-remote -l | awk '/ID/ { print $1 }'} $(goto 30)${color 2)${exec transmission-remote -l | awk '/ID/ { print $2 }'} ${goto 60}${color 2)${exec transmission-remote -l | awk '/ID/ { print $9 }'} ${goto 290}${color 2)${exec transmission-remote -l | awk '/ID/ { print $5 }'} #${goto 320}${color 2)${exec transmission-remote -l | awk '/ID/ { print $6 }'} ${goto 400}${color 2)${exec transmission-remote -l | awk '/ID/ { print $8 }'} ${goto 400}
+#${color 2)${exec transmission-remote -l | awk '/ID/ { print $1 }'} $(goto 30)${color 2)${exec transmission-remote -l | awk '/ID/ { print $2 }'} ${goto 60}${color 2)${exec transmission-remote -l | awk '/ID/ { print $9 }'} ${goto 290}${color 2)${exec transmission-remote -l | awk '/ID/ { print $5 }'} ${goto 320}${color 2)${exec transmission-remote -l | awk '/ID/ { print $6 }'} ${goto 400}${color 2)${exec transmission-remote -l | awk '/ID/ { print $8 }'} ${goto 400}

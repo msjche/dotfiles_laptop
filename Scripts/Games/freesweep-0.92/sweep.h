@@ -1,0 +1,366 @@
+/*********************************************************************
+* $Id: sweep.h.in,v 1.36 2002/12/21 21:32:09 hartmann Exp $
+*********************************************************************/
+
+#ifndef __SWEEP_H__
+#define __SWEEP_H__
+
+#include "config.h"
+
+#define mkstr(s) # s
+
+/* The library header files. */
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif /* HAVE_UNISTD_H */
+
+#ifdef HAVE_STRING_H
+#include <string.h>
+#endif /* HAVE_STRING_H */
+
+#ifdef HAVE_GETOPT_H
+#include <getopt.h>
+#endif /* HAVE_GETOPT_H */
+
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
+#endif /* HAVE_ERRNO_H */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <assert.h>
+#include <math.h>
+#include <stdarg.h>
+#include <signal.h>
+
+#ifdef HAVE_LIBNCURSES
+#include "/ncurses.h"
+#define DEFAULT_LINEDRAW 1
+#else /* HAVE_LIBNCURSES */
+#include <curses.h>
+#define DEFAULT_LINEDRAW 0
+#endif /* HAVE_LIBNCURSES */
+
+#if defined HAVE_FLOCK && defined HAVE_SYS_FILE_H
+#include <sys/file.h>
+#endif
+
+#if defined(HAVE_LIMITS_H)
+#include <limits.h>
+#endif
+
+/* XXX make this work with configure */
+#include <sys/types.h>
+#include <dirent.h>
+
+#ifdef NCURSES_MOUSE_VERSION
+#define SWEEP_MOUSE
+#endif /* NCURSES_MOUSE_VERSION */
+
+#if defined SCORESDIR
+#define USE_GROUP_BEST_FILE
+#endif
+
+#include "defaults.h"
+
+/* These are all the defines used in freesweep */
+/* These are defines for convenience */
+#define DELIMITERS " \t="
+#define DFL_GROUP_PATH ""
+#define MAGIC_NUMBER 128
+
+#ifdef __CYGWIN__
+#define DFL_PREFS_FILE "_sweeprc"
+#define DFL_BESTS_FILE "_sweeptimes"
+#else
+#define DFL_PREFS_FILE ".sweeprc"
+#define DFL_BESTS_FILE ".sweeptimes"
+#endif /* __CYGWIN__ */
+
+#define GLOBAL_PREFS_FILE "/usr/local/share/sweeprc"
+
+/* used for the superclick feature in the game */
+#define SUPERCLICK 0
+#define DIE 1
+#define DONOTHING 2
+
+/* These are defines for maximum accepted values */
+#define MAX_LINE 1024
+#define MAX_H 2048
+#define MAX_W 2048
+#define L_MAX_H 4
+#define L_MAX_W 4
+#define INFO_W 21
+#define MAX_NAME 80
+#define MAX_DATE 26
+
+/* These are the macros for cell values. */
+#define UNKNOWN 0x0
+#define MINE 0x9
+#define MARKED 0xa
+#define BAD_MARK 0xb
+#define EMPTY 0xc
+#define DETONATED 0xd
+
+/* These are for winning and losing. */
+#define INPROG 0
+#define WIN 1
+#define LOSE 2 
+#define ABORT 3
+#define RECONF 4
+
+/* These are for the alert types. */
+#define BEEP 0
+#define FLASH 1
+#define NO_ALERT 2
+
+/* These are the macros that reduce the memory usage by *half*. */
+#define GetMine(x,y,ret) \
+	ret=(unsigned char)(!((ret)=Game->Field[((x)/2+(y)*( ( Game->Width +1 )/2))])\
+	?UNKNOWN:((x)%2)?(ret)&0x0f:((ret)&0xf0)>>4)
+
+#define SetMine(x,y,val) \
+	Game->Field[((x)/2)+(y)*( ( Game->Width +1 )/2)]=(!((x)%2)?((Game->Field[((x)\
+	/2)+(y)*( ( Game->Width +1 )/2)]&0x0f)|((unsigned char)(val)<<4)):\
+	((Game->Field[((x)/2)+(y)*( ( Game->Width +1 ) /2)]&0xf0)|((unsigned char)(val)\
+	&0x0f)))
+
+/* This extends the naming convention of ncurses functions. */
+#define mvclrtoeol(y,x) (move(y,x)==ERR?ERR:clrtoeol());
+#define noutrefresh() wnoutrefresh(stdscr)
+
+#ifndef mvwhline
+#define mvwhline(w,y,x,z,n) (wmove(w,y,x)==ERR?ERR:whline(w,z,n));
+#endif /* mvwhline */
+
+#ifndef mvwvline
+#define mvwvline(w,y,x,z,n) (wmove(w,y,x)==ERR?ERR:wvline(w,z,n));
+#endif /* mvwvline */
+
+#ifndef mvgetnstr
+#define mvgetnstr(y, x, str, n) (wmove(stdscr, y, x)==ERR?ERR:wgetnstr(stdscr, str, n));
+#endif /* mvgetnstr */
+
+#ifndef ValidCoordinate
+#define ValidCoordinate(x,y) ( ( (x>=0) && (x<Game->Width) && (y>=0) && (y<Game->Height) )  ? 1 : 0 )
+#endif
+
+/* These are all the structs used in freesweep */
+/* This is the struct containing all the various drawing characters. */
+typedef struct _DrawChars
+{
+	chtype ULCorner;
+	chtype URCorner;
+	chtype LLCorner;
+	chtype LRCorner;
+	chtype HLine;
+	chtype VLine;
+	chtype UArrow;
+	chtype DArrow;
+	chtype LArrow;
+	chtype RArrow;
+	chtype Mine;
+	chtype Space;
+	chtype Mark;
+	chtype FalseMark;
+	chtype Bombed;
+} DrawChars;
+
+/* This is the struct containing all the relevant game information. */
+typedef struct _GameStats
+{
+	int Height;
+	int Width;
+	int Percent;
+	unsigned int NumMines;
+	unsigned int MarkedMines;
+	unsigned int BadMarkedMines;
+	int Color;
+	int Fast;
+	int Alert;
+	int LineDraw;
+	int CursorX, CursorY;
+	int LargeBoardX, LargeBoardY;
+	int Status;
+	unsigned int FocusX, FocusY;
+	unsigned int Time;
+	unsigned char* Field;
+	WINDOW* Border;
+	WINDOW* Board;
+} GameStats;
+
+/* This is the struct for the clearing algo. */
+struct Mark
+{
+	int x, y;
+	struct Mark *next;
+};
+
+/* this is the _NEW_ format for the best times score */
+struct BestEntry
+{
+	unsigned int area;
+	unsigned int mines;
+	unsigned int time;
+
+	char name[MAX_NAME];
+	char date[MAX_DATE];
+	char *attribs;
+};
+
+struct BestFileDesc
+{
+	/* the array of entries from the file, with one more in it. */
+	struct BestEntry *ents;
+
+	/* the number of entries in the descriptor */
+	int numents;
+
+	/* did I replace, or add? */
+	int replflag;
+};
+
+typedef struct _CoordPair
+{
+	int CoordX, CoordY;
+} CoordPair;
+
+/* stuff needed for the file gui */
+/* this is not very well designed, but oh well */
+struct FileBuf
+{
+	char *fpath;
+	char *path;
+	int numents;
+	struct FileBuf *next;
+	struct FileBuf *prev;
+};
+
+
+#ifdef DEBUG_LOG
+FILE* DebugLog;
+#endif /* DEBUG_LOG */
+
+DrawChars CharSet;
+
+/* These are the functions defined in files.c */
+int SourceHomeFile(GameStats* Game);
+int SourceGlobalFile(GameStats* Game);
+int SourceFile(GameStats* Game,FILE* PrefsFile);
+int WritePrefsFile(GameStats* Game);
+int OldPrefsFile(GameStats* Game);
+
+/* These are the functions defined in drawing.c */
+void StartCurses();
+void PrintInfo();
+void AskPrefs(GameStats* Game);
+void Help();
+void PrintBestTimes(char* FileName);
+int DrawBoard(GameStats* Game);
+void DrawCursor(GameStats* Game);
+void UndrawCursor(GameStats* Game);
+int Pan(GameStats* Game);
+int Center(GameStats* Game);
+int CenterY(GameStats* Game);
+int CenterX(GameStats* Game);
+
+/* These are the functions defined in game.c */
+int CheckColor(int NewVal);
+int CheckFast(int NewVal);
+int CheckHeight(int NewVal);
+int CheckLineDraw(int NewVal);
+int CheckNumMines(int NewVal, int Height, int Width);
+int CheckPercent(int NewVal);
+int CheckWidth(int NewVal);
+int InitGame(GameStats* Game);
+int ReadyGame(GameStats* Game);
+void SwitchCharSet(GameStats* Game);
+int InitCharSet(GameStats* Game,int Value);
+void SetCharSet(int Value);
+int ParseArgs(GameStats* Game, int Argc, char** Argv);
+void DumpGame(GameStats* Game);
+int ReReadyGame(GameStats* Game);
+void Wipe(GameStats *Game);
+
+/* These are the functions defined in play.c */
+int GetInput(GameStats* Game);
+void MoveLeft(GameStats* Game, int Num);
+void MoveRight(GameStats* Game, int Num);
+void MoveUp(GameStats* Game, int Num);
+void MoveDown(GameStats* Game, int Num);
+void Boom(void);
+void YouWin(void);
+int ClickSquare(GameStats* Game, int ThisX, int ThisY);
+int DoubleClickSquare(GameStats* Game, int ThisX, int ThisY);
+
+/* These are the functions defined in error.c */
+void SweepError(char* format, ...);
+int InitErrorWin(GameStats* Game);
+void ClearError();
+int RedrawErrorWin();
+void SweepAlert();
+void SweepMessage(char* format, ...);
+void ChangeSweepAlert(int NewAlert);
+
+/* These are the functions defined in stats.c */
+void PrintStats(GameStats *Game);
+int InitStatsWin(void);
+int RedrawStatsWin(void);
+
+/* These are the functions described in utils.c */
+void* xmalloc(size_t num);
+char* xgetcwd(char *buf, size_t size);
+DIR* xopendir(const char *buf);
+void StartTimer(void);
+void StopTimer(void);
+
+/* this is in pbests.c, which will eventually become bests.c */
+void UpdateBestTimesFile(GameStats *Game, char *filename);
+char* FPTBTF(void);
+#if defined USE_GROUP_BEST_FILE
+char* FPTGBTF(void);
+#endif
+
+/* These are the functions defined in clear.c */
+void InsertMark(struct Mark **ht, int x, int y);
+char DeleteRandomMark(struct Mark **ht, int *x, int *y);
+void Clear(GameStats *Game);
+void SuperClear(GameStats *Game);
+int FindNearest(GameStats *Game);
+int FindNearestBad(GameStats *Game);
+
+/* These are the functions in fgui.c */
+char* FSGUI(void);
+
+/* macros to lookup crap in the look up table for the clearing algo */
+#define LOOKUP(t, xx, yy) \
+	(unsigned char)((t)[(xx)/8 + yy * g_table_w]) & \
+		(((unsigned char)0x80)>>((xx)%8))
+
+#define SET(t, xx, yy) \
+	((t)[(xx)/8 + yy * g_table_w]) |= \
+		(((unsigned char)0x80)>>((xx)%8))
+
+#define UNSET(t, xx, yy) \
+	((t)[(xx)/8 + yy * g_table_w]) &= \
+		~(((unsigned char)0x80)>>((xx)%8))
+
+/* functions defined in sl.c for save/load games */
+void SaveGame(GameStats* Game, char *fname);
+GameStats* LoadGame(char *fname);
+
+/* functions defined in gpl.c */
+void PrintGPL();
+
+/* functions defined in tick.c */
+extern volatile unsigned int g_tick;
+RETSIGTYPE sighandler(int signo);
+
+/* functions in image.c */
+void SaveGameImage(GameStats* Game, char *fname);
+
+#endif /* __SWEEP_H__ */

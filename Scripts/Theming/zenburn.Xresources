@@ -1,0 +1,158 @@
+URxvt.meta8: true
+URxvt.depth: 32
+URxvt.iconFile: /usr/share/icons/Humanity/apps/128/utilities-terminal.svg
+URxvt.metaSendsEscape: truee
+
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
+
+URxvt.scrollBar: off
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.cursorColor:#ffff00
+URxvt.saveLines: 10000
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
+
+urxvt*depth:32
+urxvt*foreground:#ADADAD
+urxvt*background:rgba:0600/0600/0600/dddd
+URxvt.foreground: 15
+URxvt.geometry: 145x55
+
+! Ctrl-Tab, Ctrl-Shift-Tab and other bindings in urxvt
+URxvt.keysym.Control-Up:   \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:    \033[1;5C
+
+!!Hermit
+!URxvt*font: xft:Hermit:medium:size=12:antialiasing=true
+!URxvt*boldFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+!URxvt*italicFont: xft:Hermit:medium:size=12:antialiasing=true:style=medium
+!URxvt*boldItalicFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+!URxvt.letterSpace: -1
+
+!!Inconsolata
+!URxvt.font: xft:Inconsolata for Powerline:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldFont: xft:Inconsolata for Powerline:bold:pixelsize=20:antialias=true:hinting=true
+!URxvt.italicFont: xft:Inconsolata for Powerline:italic:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=20:antialias=true
+!URxvt.letterSpace: -1
+
+!!DejaVu Sans
+!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
+!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
+!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true
+!URxvt.letterSpace: -1
+
+!!!Droid Sans
+!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=20:antialias=true:hinting=true
+!URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=20:antialias=true
+!URxvt.letterSpace: -1
+
+!!Droid Sans
+URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
+URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
+URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true
+URxvt.letterSpace: -1
+
+!! Monofur
+!URxvt.font: xft:Monofur for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont: xft:Monofur Bold for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont: xft:Monofur Italic for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Monofur Bold for Powerline:italic:pixelsize=22:antialias=true
+
+!! Anonymice
+!URxvt.font: xft:Anonymice Powerline:pixelsize=21:antialias=true:hinting=true
+!URxvt.boldFont: xft:Anonymice Powerline Bold:pixelsize=21:antialias=true:hinting=true
+!URxvt.italicFont: xft:Anonymice Powerline Italic:pixelsize=21:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Anonymice Bold Italic:pixelsize=21:antialias=true
+!URxvt.letterSpace: 1
+
+!! Literation
+!URxvt.font: xft:Literation Mono Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldFont: xft:Literation Mono Bold for Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.italicFont: xft:Literation Mono Italic for Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Literation Mono Bold for Powerline:italic:pixelsize=18:antialias=true
+!URxvt.letterSpace: -1
+
+!! Sauce Code
+!URxvt.font: xft:Sauce Code Powerline:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldFont: xft:Sauce Code Powerline Bold:pixelsize=20:antialias=true:hinting=true
+!URxvt.italicFont: xft:Sauce Code Powerline Italic:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Sauce Code Bold Italic:pixelsize=20:antialias=true
+!URxvt.letterSpace: -1
+
+!! Ubuntu Mono derivative
+!URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldFont: xft:Ubuntu Mono derivative Powerline Bold:pixelsize=20:antialias=true:hinting=true
+!URxvt.italicFont: xft:Ubuntu Mono derivative Powerline Italic:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Ubuntu Mono derivative Bold Italic:pixelsize=20:antialias=true
+!URxvt.letterSpace: -1
+
+
+!URxvt.font: 	xft: Anonymice Powerline:pixelsize=17:anialias=true
+!		xft: DejaVu Sans Mono for Powerline:pixelsize=12:anialias=true
+!		xft: Digital Readout Thick UprightPowerline:pixelsize=17:anialias=true
+!		xft: Droid Sans Mono for Powerline:pixelsize=12:anialias=true
+!		xft: FuraMono-Regular Powerline:pixelsize=17:anialias=true
+!		xft: Inconsolata for Powerline:pixelsize=17:anialias=true
+!		xft: Literation Mono Powerline:pixelsize=17:anialias=true
+!		xft: Meslo L DZ Regular for Powerline:pixelsize=17:anialias=true
+!		xft: Monofur for Powerline:pixelsize=17:anialias=true
+!		xft: Sauce Code Powerline Medium:pixelsize=17:anialias=true
+!		xft: Ubuntu Mono derivative Powerline:pixelsize=17:anialias=true
+
+
+! Disable screen printing by overriding the default print pipe.
+URxvt.print-pipe: "cat >/dev/null"
+
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+
+URxvt.keysym.M-x           	: perl:keyboard-select:activate
+URxvt.keysym.M-u           	: perl:url-select:select_next
+URxvt.keysym.M-c           	: perl:clipboard:copy
+URxvt.keysym.M-v           	: perl:clipboard:paste
+URxvt.keysym.M-s           	: perl:keyboard-select:search
+URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
+!URxvt.perl-ext-common     	: tabbed,default,matcher
+!Urxvt.perl-lib            	: /usr/lib/urxvt/perl/
+URxvt.url-select.launcher  	: luakit
+URxvt.url-select.autocopy  	: true
+URxvt.url-select.underline 	: true
+
+URxvt.url-select.button:   1
+
+!URxvt.clipboard.copycmd:  xsel --input  --clipboard
+!URxvt.clipboard.pastecmd: xsel --output --clipboard
+
+!URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+!URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+ 
+URxvt*background: #3f3f3f
+URxvt*foreground: #dcdccc
+URxvt*cursorColor: #aaaaaa
+URxvt*colorUL: #366060
+URxvt*underlineColor: #dfaf8f
+URxvt*color0: #3f3f3f
+URxvt*color1: #cc9393
+URxvt*color2: #7f9f7f
+URxvt*color3: #d0bf8f
+URxvt*color4: #6ca0a3
+URxvt*color5: #dc8cc3
+URxvt*color6: #93e0e3
+URxvt*color7: #dcdccc
+URxvt*color8: #000000
+URxvt*color9: #dca3a3
+URxvt*color10: #bfebbf
+URxvt*color11: #f0dfaf
+URxvt*color12: #8cd0d3
+URxvt*color13: #dc8cc3
+URxvt*color14: #93e0e3
+URxvt*color15: #ffffff

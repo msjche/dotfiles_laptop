@@ -1,0 +1,109 @@
+###################### # - Conky settings - #
+######################
+update_interval 2
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 2
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Droid Sans:size=11
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window yes
+own_window_type desktop
+own_window_hints below,skip_taskbar,skip_pager
+
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+
+alignment top_right
+gap_y 55
+gap_x 15
+border_inner_margin 8
+
+draw_outline no
+draw_borders no
+
+minimum_size 470 700
+maximum_width 470
+maximum_height 700
+
+default_bar_size i300 12
+draw_graph_borders no
+draw_bar_borders no
+
+default_color DEDEDE
+color1 1793D0
+color2 8C8C8C
+color3 ABABAB
+color4 C9C9C9
+color5 DEDEDE
+color6 757575
+color7 35BF5C
+color8 575757
+
+TEXT
+${voffset 10}${color1}${goto 5}${font Liberation Sans:size=82}${time %H}${font Liberation Sans:size=38}${voffset -38}:${time %M}${font Liberation Sans:size=18}${voffset -19}${time %S}
+${color2}${goto 130}${voffset 10}${font :size=11}${time %A}
+${color3}${goto 130}${voffset 1}${font :size=10}${time %d %B %Y}
+${color2}${voffset -100}${font}${font Droid Sans Mono:size=13}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./ !d' | sed 's/$/ /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignr} /' | sed /" $DJS "/s/" $DJS "/" "'${font Droid Sans Mono:bold:size=14}${color7}'"$DJS"'${font Droid Sans Mono:size=13}${color2}'" "/}${font}
+# NETWORK
+${font xirod:Bold:size=13}${color7}NETWORK ${hr 2}$font
+
+${font Droid Sans:Bold:size=12}${color7}NETWORK (GENERAL)${stippled_hr}$color$font
+Active Interface ${alignr}$gw_iface
+Public IP${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}
+Gateway IP ${alignr}$gw_ip
+DNS ${alignr}$nameserver
+TOR Status ${alignr}${if_running tor} Active${else}Disabled${endif}
+Firewall ${alignr}${exec systemctl status ufw | grep active | cut -c 11-27}
+Packets $alignr In:${tcp_portmon 1 32767 count}  Out: ${tcp_portmon 32768 61000 count}
+
+${font Droid Sans:Bold:size=11}${alignc}${color7}NETWORK (WIRELESS) ${stippled_hr}$font$color
+${font Droid Sans:Bold:size=11}wlp6s0 $font$alignr ${addr wlp6s0}$font
+SSID${font Droid Sans:size=11}${alignr}${wireless_essid wlp6s0}${font}
+Down: ${color red}${downspeed wlp6s0}/s ${color}(${totaldown wlp6s0})${alignr}Up: ${color green}${upspeed wlp6s0}/s $color(${totalup wlp6s0})
+${downspeedgraph wlp6s0 70,230  000000 ff0000} ${alignr}${upspeedgraph wlp6s0 70,230 000000 00ff00}
+$alignr${color6}Link quality:    ${color7}${wireless_link_bar 12,350 wlp6s0}$color
+
+# TCP & UDP     
+${font xirod:Bold:size=13}${color7}CONNECTIONS ${hr 2}$font$color
+${font Droid Sans:Bold:size=11}Inbound Connections:  ${tcp_portmon 1 32767 count}  ${alignr} Local Service / Port$font
+   ${tcp_portmon 1 32767 rhost 0} ${alignr} $font${tcp_portmon 1 32767 lservice 0}
+   ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
+   ${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
+   ${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
+   ${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
+   ${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 5}   
+${font Droid Sans:Bold:size=11}Outbound Connections:  ${tcp_portmon 32768 61000 count}  ${alignr} Remote Service / Port$font
+   ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+   ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+   ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+   ${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+   ${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
+   ${tcp_portmon 32768 61000 rhost 5} ${alignr} ${tcp_portmon 32768 61000 rservice 5}
+   ${tcp_portmon 32768 61000 rhost 6} ${alignr} ${tcp_portmon 32768 61000 rservice 6}
+   ${tcp_portmon 32768 61000 rhost 7} ${alignr} ${tcp_portmon 32768 61000 rservice 7}
+   ${tcp_portmon 32768 61000 rhost 8} ${alignr} ${tcp_portmon 32768 61000 rservice 8}
+   ${tcp_portmon 32768 61000 rhost 9} ${alignr} ${tcp_portmon 32768 61000 rservice 9}
+   ${tcp_portmon 32768 61000 rhost 10} ${alignr} ${tcp_portmon 32768 61000 rservice 10}
+   ${tcp_portmon 32768 61000 rhost 11} ${alignr} ${tcp_portmon 32768 61000 rservice 11}
+   ${tcp_portmon 32768 61000 rhost 12} ${alignr} ${tcp_portmon 32768 61000 rservice 12}
+   ${tcp_portmon 32768 61000 rhost 13} ${alignr} ${tcp_portmon 32768 61000 rservice 13}
+   ${tcp_portmon 32768 61000 rhost 14} ${alignr} ${tcp_portmon 32768 61000 rservice 14}
+
+${color orange}${font xirod:size=13}PACMAN LOG ${hr 2}$color$font ${execi 30 tail -n10 /var/log/pacman.log}

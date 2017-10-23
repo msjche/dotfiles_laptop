@@ -1,0 +1,4 @@
+${alignc 630}${voffset -90}${color}${font ConkyWeather:style=Bold:size=42}[--datatype=WF]${font}
+${alignc 607}${voffset 10}[--datatype=CT]
+${alignc 607}${voffset -1}${color3}[--datatype=HT --hideunits]${color}F / ${color3}[--datatype=LT --hideunits]${color}F
+

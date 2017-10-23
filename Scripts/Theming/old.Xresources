@@ -1,0 +1,80 @@
+vim: set filetype=xdefaults :
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! URxvt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+URxvt.borderless        : true
+ 
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+ 
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+!URxvt.perl-ext-common 	   : tabbed,default,matcher
+!Urxvt*perl-lib			   : /usr/lib/urxvt/perl/
+URxvt.url-select.launcher  : chromium 
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+ 
+!URxvt.Depth : 32
+!URxvt.background : #404040
+!URxvt.foreground : #F6F3E8
+!URxvt*.transparent  : True
+!URxvt*.shading   : 30
+ 
+!URxvt.depth: 32
+!URxvt.background: [50]#000000
+ 
+URxvt.geometry  : 160x50
+ 
+URxvt.font        : xft:Inconsolata:pixelsize=14
+URxvt.letterSpace : 0
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : false
+ 
+URxvt.urgentOnBell: true
+ 
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+ 
+!XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : true
+Xft.antialias : true
+Xft.rgba      : rgb
+
+ 
+*background: 				#111111
+*foreground: 				#F5F5F5
+
+!black
+*color0:     #000000
+*color8:     #404040
+!red
+*color1:     #AF5F5F
+*color9:     #FF5F8F
+!green
+*color2:     #7F9F7F
+*color10:    #87D787
+!yellow
+*color3:     #B3B784
+*color11:    #CAE682
+!blue
+*color4:     #9393CC
+*color12:    #93A2CC
+!magenta
+*color5:     #93A2CC
+*color13:    #A893CC
+!cyan
+*color6:     #87AFD7
+*color14:    #53DCCD
+!white
+*color7:     #AAAAAA
+*color15:    #FFFFFF
+

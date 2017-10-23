@@ -1,0 +1,144 @@
+##################################################
+##################################################
+##												##
+##					Settings					##
+##												##
+##################################################
+##################################################
+background no
+update_interval 1.0
+double_buffer yes
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+text_buffer_size 2048
+imlib_cache_size 0
+override_utf8_locale yes
+
+
+# +++++ Window +++++
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 2000 225
+maximum_width 2000
+
+alignment bottom_middle
+gap_x 0
+gap_y 0
+
+
+# +++++ Styles +++++
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+
+
+# +++++ Colors +++++
+default_shade_color 101010
+default_color 8F8F8F
+
+# Blue
+#color1 71A1DF
+#color2 2C3949
+#color3 6F99B4
+#lua_load ~/.conky/NightDrive/scripts/rings_blue.lua
+
+# Green
+#color1 AAB364
+#color2 2F312E
+#color3 628747
+#lua_load ~/.conky/NightDrive/scripts/rings_green.lua
+
+# Orange
+#color1 DAB152
+#color2 2E2B22
+#color3 B28435
+#lua_load ~/.conky/NightDrive/scripts/rings_orange.lua
+
+# Red
+color1 EE6363
+color2 3B2A2A
+color3 AE4747
+lua_load ~/.conky/NightDrive/scripts/rings_red.lua
+
+# Mono
+#color1 8F8F8F
+#color2 303030
+#color3 555555
+#lua_load ~/.conky/NightDrive/scripts/rings_mono.lua
+
+
+# +++++ LUA +++++
+lua_draw_hook_pre ring_stats
+
+
+# +++++ Font +++++
+use_xft yes
+xftfont Droid Sans:size=10
+xftalpha 0.1
+uppercase no
+
+
+
+##################################################
+##################################################
+##												##
+##					Components					##
+##												##
+##################################################
+##################################################
+
+# +++++ Clock +++++
+template1 ${goto 50}${voffset 65}${color2}${font Digital Readout Thick Upright:size=75}00${voffset -9}:${voffset 9}00${goto 50}${color1}${time %k}${voffset -9}:${voffset 9}${time %M}\n${goto 245}${voffset -127}${color2}${font Digital Readout Thick Upright:size=45}00${goto 245}${color1}${time %d}\n${font Digital Readout Thick Upright:size=21}${goto 248}${voffset -37}${color2}00${goto 247}${color1}${time %m}${goto 274}${color2}00${goto 274}${color1}${time %y}${font}\n
+
+
+# +++++ Weather +++++
+template2 ${execpi 1800 conkyForecast --location=2513768 --template=~/.conky/NightDrive/conkyForecast.template}
+
+
+# +++++ CPU +++++
+template3 ${image ~/.conky/NightDrive/images/icons/cpu.png -p 530,93 -s 36x36 -f 86400}${voffset -120}${alignc 453}${font}${color}${execi 30 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-6}C\n${voffset 72}${alignc 453}${font}${freq_g 1}GHz\n
+
+
+# +++++ Memory +++++
+template4 ${image ~/.conky/NightDrive/images/icons/mem.png -p 679,95 -s 36x36 -f 86400}${voffset -103}${alignc 300}${mem}\n${voffset 75}${alignc 300}${memperc}%\n
+
+
+# +++++ Nvidia +++++
+template5 ${image ~/.conky/NightDrive/images/icons/nvidia.png -p 833,95 -s 36x36 -f 86400}${voffset -103}${alignc 150}${nvidia temp}°C\n${voffset 75}${alignc 150}${nvidia gpufreq}MHz\n
+
+
+# +++++ Sys & Network +++++
+template6 ${image ~/.conky/NightDrive/images/icons/arch.png -p 970,65 -s 56x56 -f 86400}${voffset -22}${alignc}${color3}${font}${execi 600 pacman -Qu | wc -l}${color} updates\n${voffset -1}${alignc}${execi 60 uname -r}\n${image ~/.conky/NightDrive/images/icons/net.png -p 1133,93 -s 36x36 -f 86400}${voffset -120}${alignc -200}${downspeed}\n${voffset 40}${alignc -200}${upspeed}\n
+
+
+# +++++ Storage +++++
+template7 ${image ~/.conky/NightDrive/images/icons/hdd.png -p 1283,93 -s 36x36 -f 86400}${voffset -130}${alignc -300}${fs_free /}\n${voffset 40}${alignc -300}${fs_free /home}\n
+
+# +++++ Vol +++++
+template8 ${voffset -10}${alignc -600}${mpd_vol}%\n
+
+# +++++ MPD +++++
+template9 ${voffset -10}${alignc -600}${mpd_elapsed}/${mpd_length}\n${goto 901}${voffset -1}${font Droid Sans Mono:size=11}${scroll 26 3 ${mpd_smart}}\n${font}${goto 901}${color 414141}--------------------------------------------\n${goto 901}${voffset 1}${color3}${font}Album: ${color}${mpd_album 29}\n${goto 901}${voffset -10}${color3}Bit: ${color}${mpd_bitrate}kbps${goto 968}${color3}Rand: ${color}${mpd_random}   ${color3}Rep: ${color}${mpd_repeat}
+
+TEXT
+${image ~/.conky/NightDrive/images/bg.png -s 2000x225 -f 86400}${template1}${template2}${template3}${template4}${template5}${template6}${template7}${template8}
+
+${if_mpd_playing}
+${if_match "${mpd_status}"=="Playing"}${image ~/.conky/NightDrive/images/icons/play.png -p 1435,93 -s 36x36 -f 86400}${if_existing /tmp/cover}${image /tmp/cover -p 1580,90 -s 96x96}${else}${image ~/.conky/NightDrive/images/cover/cover_bg.png -p 1545,63 -s 105x96}${endif}${template9}${endif}
+${if_match "${mpd_status}"=="Paused"}${image ~/.conky/NightDrive/images/icons/pause.png -p 1435,93 -s 36x36 -f 86400}${if_existing /tmp/cover}${image /tmp/cover -p 1580,90 -s 96x96}${else}${image ~/.conky/NightDrive/images/cover/cover_bg.png -p 1545,63 -s 105x96}${endif}${voffset -9}${template9}${voffset 9}${endif}
+${if_match "${mpd_status}"=="Stopped"}${image ~/.conky/NightDrive/images/icons/stop.png -p 1435,93 -s 36x36 -f 86400}${image ~/.conky/NightDrive/images/cover/cover_bg.png -p 1545,63 -s 105x96 -f 86400}${voffset -106}${color 414141}${font Droid Sans Mono:size=14}
+${goto 901}${scroll 32 1 M   M U   U  SSS  III  CCC     PPPP  L     AA  Y   Y EEEE RRRR      DDD   AA  EEEE M   M  OOO  N   N}
+${goto 901}${scroll 32 1 MM MM U   U S      I  C        P   P L    A  A  Y Y  E    R   R     D  D A  A E    MM MM O   O NN  N}
+${goto 901}${scroll 32 1 M M M U   U  SSS   I  C        PPPP  L    AAAA   Y   EEE  RRRR      D  D AAAA EEE  M M M O   O N N N}
+${goto 901}${scroll 32 1 M   M U   U     S  I  C        P     L    A  A   Y   E    R R       D  D A  A E    M   M O   O N  NN}
+${goto 901}${scroll 32 1 M   M  UUU  SSSS  III  CCC     P     LLLL A  A   Y   EEEE R  RR     DDD  A  A EEEE M   M  OOO  N   N}${voffset -88}${endif}
+${else}${image ~/.conky/NightDrive/images/cover/cover_bg.png -p 1545,65 -s 105x96 -f 86400}${voffset -7}${endif}
+${image ~/.conky/NightDrive/images/cover/cover_overlay.png -p 1545,65 -s 105x96 -f 86400}

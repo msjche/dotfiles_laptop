@@ -1,0 +1,146 @@
+######################
+# - Conky settings - #
+######################
+update_interval 2
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 2
+own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Droid Sans:size=11
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window yes
+own_window_type desktop
+own_window_hints below,skip_taskbar,skip_pager
+
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+
+alignment top_left
+gap_y 30
+gap_x 0 
+border_inner_margin 8
+draw_outline no
+draw_borders no
+
+#minimum_size 470 700
+#maximum_width 470
+#maximum_height 700
+
+default_bar_size 70 12
+#draw_bar_borders no
+
+default_color DEDEDE
+color1 1793D0
+color2 8C8C8C
+color3 ABABAB
+color4 C9C9C9
+color5 DEDEDE
+color6 757575
+
+TEXT
+${font xirod:Bold:size=12}${color1}ARCH ${color}$font
+# SYS
+
+#System Uptime $alignr $uptime
+#User(s) $alignr $user_names
+#Active Consoles $alignr $user_terms
+#$sysname $kernel $alignr $machine
+#NVidia Optimus: $alignr${execi 60 cat /proc/acpi/bbswitch | awk '{print $2}'}
+#AC Status $alignr$acpiacadapter ${battery BAT1}
+#AC Status $alignr${battery BAT1}
+#Battery Temp $alignr$acpitemp°C
+Temp 
+${exec sensors | grep Core\ 3 | awk '{print $3}'}
+#Updates $alignr Pacman: ${execp cat /tmp/off.updates | wc -l}
+#$alignr AUR: ${execp cat /tmp/aur.updates | wc -l}
+
+
+
+
+# CPU
+${font xirod:Bold:size=14}${color1}CPU$font$color
+
+${color6}${cpubar cpu1}${color}
+${color6}${cpubar cpu2}${color}
+${color6}${cpubar cpu3}${color}
+${color6}${cpubar cpu4}${color}
+${color6}${cpubar cpu5}${color}
+${color6}${cpubar cpu6}${color}
+${color6}${cpubar cpu7}${color}
+${color6}${cpubar cpu8}${color}
+${color6}${cpubar cpu9}${color}
+${color6}${cpubar cpu10}${color}
+${color6}${cpubar cpu11}${color}
+${color6}${cpubar cpu12}${color}
+
+${font Droid Sans:size=6}
+Core 2${alignr}Core 2
+${cpugraph cpu1 20,33 000000 757575} ${alignr}${cpugraph cpu2 20,33 000000 757575}
+Core 3${alignr}Core 4
+${cpugraph cpu3 20,33 000000 757575} ${alignr}${cpugraph cpu4 20,33 000000 757575}
+Core 5${alignr}Core 6
+${cpugraph cpu4 20,33 000000 757575} ${alignr}${cpugraph cpu5 20,33 000000 757575}
+Core 7${alignr}Core 8
+${cpugraph cpu6 20,33 000000 757575} ${alignr}${cpugraph cpu7 20,33 000000 757575}
+Core 9${alignr}Core 10
+${cpugraph cpu6 20,33 000000 757575} ${alignr}${cpugraph cpu7 20,33 000000 757575}
+Core 11${alignr}Core 12
+${cpugraph cpu6 20,33 000000 757575} ${alignr}${cpugraph cpu7 20,33 000000 757575}
+$font
+
+# LOAD
+${font xirod:Bold:size=13}${color1}LOAD ${hr 2}$font${color}
+
+${font Droid Sans:bold:size=11}CPU ${hr 1}
+       ${running_processes} / $processes ${goto 260}(%) PID${goto 362}CPU $alignr MEM$font
+       ${font Droid Sans:bold:size=11}${color2}${top name 1}${goto 265}${top pid 1}${goto 355}${top cpu 1}$alignr${top mem 1}${color}$font
+       ${color3}${top name 2}${goto 265}${top pid 2}${goto 355}${top cpu 2}$alignr${top mem 2}${color}
+       ${color4}${top name 3}${goto 265}${top pid 3}${goto 355}${top cpu 3}$alignr${top mem 3}${color}
+       ${top name 4}${goto 265}${top pid 4}${goto 355}${top cpu 4}$alignr${top mem 4}
+       ${top name 5}${goto 265}${top pid 5}${goto 355}${top cpu 5}$alignr${top mem 5}
+
+${font Droid Sans:bold:size=11}MEM  ${hr 1}
+${goto 260}(%) PID${goto 360}MEM${alignr}CPU$font
+       ${font Droid Sans:bold:size=11}${color2}${top_mem name 1}${goto 265}${top_mem pid 1}${goto 355}${top_mem mem 1}${alignr}${top_mem cpu 1}$font
+       ${color3}${top_mem name 2}${goto 265}${top_mem pid 2}${goto 355}${top_mem mem 2}${alignr}${top_mem cpu 2}$color
+       ${color4}${top_mem name 3}${goto 265}${top_mem pid 3}${goto 355}${top_mem mem 3}${alignr}${top_mem cpu 3}$color
+       ${color5}${top_mem name 4}${goto 265}${top_mem pid 4}${goto 355}${top_mem mem 4}${alignr}${top_mem cpu 4}$color
+       ${top_mem name 5}${goto 265}${top_mem pid 5}${goto 355}${top_mem mem 5}${alignr}${top_mem cpu 5}
+
+# MEMORY
+${font xirod:Bold:size=13}${color1}MEMORY ${hr 2}$color$font
+
+${color5}${font Droid Sans:bold:size=11}RAM$font$color
+       $mem / $memmax $alignr $memperc %
+       ${color6}${membar 14,450 /}$color
+#${color5}${font Droid Sans:bold:size=8}SWAP$font$color
+#       $swap / $swapmax $alignr $swapperc %
+#       ${color6}${swapbar 10,330 /}$color
+
+## HDD
+#${font xirod:Bold:size=13}${color1}DISKS ${hr 2}$font$color
+#${font Droid Sans:bold:size=11}${color5}/dev/sda   		${color6}Read:$diskio_read	Write:$diskio_write${color}   $alignr ${execi 300 hddtemp /dev/sda | cut -c34-35}°C$color
+#
+#${font Droid Sans:bold:size=11}${color5}ROOT $font$font$alignr ${fs_type /}$font
+#       ${color5}${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %$color
+#       ${color6}${fs_bar 14,450 /}$color
+#${font Droid Sans:bold:size=11}${color5}HOME $font$font$alignr ${fs_type /home}$font
+#       ${color5}${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home} %$color
+#       ${color6}${fs_bar 14,450 /home}$color
