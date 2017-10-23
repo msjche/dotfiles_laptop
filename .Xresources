@@ -97,7 +97,7 @@ URxvt.letterSpace: -1
 !URxvt.boldFont: xft:Sauce Code Powerline Bold:pixelsize=14:antialias=true:hinting=true
 !URxvt.italicFont: xft:Sauce Code Powerline Italic:pixelsize=14:antialias=true:hinting=true
 !URxvt.boldItalicFont: xft:Sauce Code Bold Italic:pixelsize=14:antialias=true
-!URxvt.letterSpace: -1
+!!URxvt.letterSpace: -1
 
 !! Ubuntu Mono derivative
 !URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=16:antialias=true:hinting=true
@@ -133,7 +133,7 @@ URxvt.keysym.M-s           	: perl:keyboard-select:search
 URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
 !URxvt.perl-ext-common     	: tabbed,default,matcher
 !Urxvt.perl-lib            	: /usr/lib/urxvt/perl/
-URxvt.url-select.launcher  	: luakit
+URxvt.url-select.launcher  	: qutebrowser
 URxvt.url-select.autocopy  	: true
 URxvt.url-select.underline 	: true
 
