@@ -316,7 +316,7 @@ alias music='sh ~/Scripts/music.sh & '
 ## Multimedia
 alias irc='cp ~/.weechat/irc.conf.bak ~/.weechat/irc.conf && weechat-curses'
 alias M='mpv'
-alias Vids='cd ~/Movies && ranger'
+alias Vids='cd ~/Downloads/.blackbox && ranger'
 
 ## Google Calenar
 alias gcal-week='gcalcli --width 12 calw'
@@ -477,7 +477,7 @@ pandora-cli() { clear && figlet -c Pandora CLI && ~/.config/pianobar/pianobar_he
 
 # PMS- ncurses Spotify client
 #spotify-cli() { clear && cd ~/Music && figlet -c Spotify CLI && python3 ~/Scripts/mps/mps;}
-spotify-cli() { clear && python2 ~/Git/mps/mps;}
+#spotify-cli() { clear && python2 ~/Git/mps/mps;}
 
 # Grooveshark CLI
 groove-dl-cli() { cd grooveshark && clear && figlet -c Grooveshark && groove-dl ;}
@@ -766,10 +766,10 @@ source /home/msjche/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/msjche/.oh-my-zsh/oh-my-zsh.sh
 
 clear
-neofetch --w3m --source ~/Icons/arch-blue-large.png
+#neofetch --w3m --source ~/Icons/arch-blue-large.png
 #neofetch
 #/home/msjche/Scripts/pacolor.sh
 #/home/msjche/Scripts/starwars.sh
 #/home/msjche/Scripts/batman.sh
-#/home/msjche/Scripts/invaders1.sh
+/home/msjche/Scripts/invaders1.sh
 #screenfetch
