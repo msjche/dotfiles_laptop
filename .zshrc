@@ -771,5 +771,5 @@ clear
 #/home/msjche/Scripts/pacolor.sh
 #/home/msjche/Scripts/starwars.sh
 #/home/msjche/Scripts/batman.sh
-/home/msjche/Scripts/invaders1.sh
-#screenfetch
+#/home/msjche/Scripts/invaders1.sh
+screenfetch
