@@ -60,10 +60,10 @@ URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=1
 URxvt.letterSpace: -1
 
 !!Droid Sans
-!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=12:antialias=true:hinting=true
-!URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=12:antialias=true:hinting=true
-!URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=12:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=12:antialias=true
+!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=11:antialias=true:hinting=true
+!URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=11:antialias=true:hinting=true
+!URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=11:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=11:antialias=true
 !!URxvt.letterSpace: -2
 
 !!Droid Sans

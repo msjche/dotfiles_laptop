@@ -314,7 +314,8 @@ alias Pods='cd ~/Podcasts && ranger'
 alias music='sh ~/Scripts/music.sh & '
 
 ## Multimedia
-alias irc='cp ~/.weechat/irc.conf.bak ~/.weechat/irc.conf && weechat-curses'
+#alias irc='cp ~/.weechat/irc.conf.bak ~/.weechat/irc.conf && weechat-curses'
+alias irc='weechat-curses'
 alias M='mpv'
 alias Vids='cd ~/Downloads/.blackbox && ranger'
 
