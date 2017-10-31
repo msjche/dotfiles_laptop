@@ -34,10 +34,12 @@ let g:airline_theme='kolor'
 "colorscheme molokai
 colorscheme ir_black
 "colorscheme neodark
+"colorscheme kolor
 "colorscheme gotham
 "colorscheme jellybeans 
 "volorscheme desertEx
 "colorscheme skittles_berry
+"colorscheme skittles_dark
 "colorscheme codeblocks_dark
 
 let g:neodark#terminal_transparent = 1

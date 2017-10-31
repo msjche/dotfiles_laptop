@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 #export NMON=cmknt
 export EDITOR="vim"
 export PAGER="less"
-export BROWSER="opera"
+export BROWSER="qutebrowser"
 export BROWSERCLI="w3m"
 export MOVPLAY="mpv"
 export PICVIEW="feh"
@@ -350,24 +350,24 @@ alias FF-cam='mplayer -cache 256 -tv driver=v4l2:width=320:height=240 -vo xv tv:
 ## Net
 alias NM='sudo /etc/init.d/NetworkManager restart'
 alias WW='wicd-curses'
-alias hogs='sudo nethogs tun0'
-alias net-driftnet='echo "see pics from other computers on network" && sudo driftnet -i eno1'
-alias net-ettercap='echo "set up interface to capture network data" && sudo ettercap -TQM arp -i tun0//'
-alias net-urlsnarf='echo "see which websites others on network are visiting" && sudo urlsnarf -i eno1|cut -d\" -f4'
-alias net-scan='sudo arp-scan -l -I eno1'
+alias hogs='sudo nethogs wlp6s0'
+alias net-driftnet='echo "see pics from other computers on network" && sudo driftnet -i wlp6s0'
+alias net-ettercap='echo "set up interface to capture network data" && sudo ettercap -TQM arp -i wlp6s0//'
+alias net-snarf='echo "see which websites others on network are visiting" && sudo snarf -i wlp6s0|cut -d\" -f4'
+alias net-scan='sudo arp-scan -l -I wlp6s0'
 alias net-stat='netstat -t -v -c -ee'
 alias net-traf='sudo iptraf-ng'
 alias net-bmon='bmon'
 alias net-nmap='nmap -v -sn 191.168.1.0/24'
 alias net-fping='fping -c1 -gds 192.168.1.0/24 2>&1| egrep -v "ICMP|xmt"'
-alias net-dump='sudo tcpdump -i eno1'
+alias net-dump='sudo tcpdump -i wlp6s0'
 alias net-wifi='wavemon'
 alias net-nmon='nmon'
 alias net-speedtest='speedtest-cli'
-alias net-graph='speedometer -r tun0 -t tun0'
-alias graph='nbwmon -i eno1'
+alias net-graph='speedometer -r wlp6s0 -t wlp6s0'
+alias graph='nbwmon -i wlp6s0'
 alias iftop='sudo iftop -p -n'
-alias slurm='slurm -i eno1'
+alias slurm='slurm -i wlp6s0'
 
 ## Power
 alias bat='acpi'
@@ -767,9 +767,9 @@ source /home/msjche/.oh-my-zsh/oh-my-zsh.sh
 
 clear
 #neofetch --w3m --source ~/Icons/arch-blue-large.png
-neofetch
+#neofetch
 #/home/msjche/Scripts/pacolor.sh
 #/home/msjche/Scripts/starwars.sh
 #/home/msjche/Scripts/batman.sh
 #/home/msjche/Scripts/invaders1.sh
-#screenfetch
+screenfetch -E
