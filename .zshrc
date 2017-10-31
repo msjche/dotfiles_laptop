@@ -169,6 +169,10 @@ alias xz='tar -xJf'
 alias bz='tar -xvjf'
 alias bz2='tar -jxvf'
 
+## wgetpaste
+# sudo wgetpaste -c 'cat /var/tmp/portage/media-sound/clementineXXXX/temp/build.log'
+# then paste url provided
+
 ## Gentoo
 alias HowLong='genlop -t'
 alias OneShot='emerge --oneshot portage'
@@ -193,7 +197,7 @@ alias E='sudo tail -f /var/log/emerge.log'
 ## Manjaro
 alias Man-mirrors='sudo pacman-mirrors -g && sudo pacman -Syy'
 
-## Pacman
+## Arch
 alias UU='packer -Syyu && rm /tmp/off.updates && rm /tmp/aur.updates'
 alias Cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 alias Optimize='sudo pacman-optimize'
