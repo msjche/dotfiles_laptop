@@ -1,0 +1,16 @@
+# Newsbeuter config file.
+# To be placed in ~/.newsbeuter or ~/.config/newsbeuter
+always-display-description  true
+auto-reload             yes
+browser                 dwb
+cleanup-on-quit         yes
+download-retries        10
+download-timeout        20
+refresh-on-startup      yes
+reload-time             10
+download-path           ~/Podcasts
+max-downloads           10
+player                  mplayer
+cleanup-on-quit         yes
+confirm-exit            yes
+history-limit           100

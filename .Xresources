@@ -23,7 +23,7 @@ urxvt*depth:32
 urxvt*foreground:#ADADAD
 urxvt*background:rgba:0600/0600/0600/dddd
 URxvt.foreground: 15
-URxvt.geometry: 153x50
+URxvt.geometry: 170x50
 
 ! Ctrl-Tab, Ctrl-Shift-Tab and other bindings in urxvt
 URxvt.keysym.Control-Up:   \033[1;5A
