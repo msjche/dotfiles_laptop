@@ -1,25 +1,25 @@
 #scratch# Oh-My-Zsh
 ZSH=/home/msjche/.oh-my-zsh
-ZSH_THEME="powerline"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
-#ZSH_THEME="gentoo"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
+#ZSH_THEME="powerline"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
+ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean candy gentoo terminalparty
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
 #POWERLINE_FULL_CURRENT_PATH="true"
 #POWERLINE_SHOW_GIT_ON_RIGHT="true"
-POWERLINE_DATE_FORMAT="%D{%d-%m}"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_DETECT_SSH="true"
-POWERLINE_GIT_CLEAN="✔"
-POWERLINE_GIT_DIRTY="✘"
-POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
-POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
-POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
-POWERLINE_GIT_UNTRACKED="%F{cyan}✭%F{black}"
-POWERLINE_GIT_RENAMED="➜"
-POWERLINE_GIT_UNMERGED="═"
-POWERLINE_RIGHT_A_COLOR_FRONT="black"
-POWERLINE_RIGHT_A_COLOR_BACK="red"
+#POWERLINE_DATE_FORMAT="%D{%d-%m}"
+#POWERLINE_HIDE_HOST_NAME="true"
+#POWERLINE_DETECT_SSH="true"
+#POWERLINE_GIT_CLEAN="✔"
+#POWERLINE_GIT_DIRTY="✘"
+#POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
+#POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
+#POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
+#POWERLINE_GIT_UNTRACKED="%F{cyan}✭%F{black}"
+#POWERLINE_GIT_RENAMED="➜"
+#POWERLINE_GIT_UNMERGED="═"
+#POWERLINE_RIGHT_A_COLOR_FRONT="black"
+#POWERLINE_RIGHT_A_COLOR_BACK="red"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -148,6 +148,7 @@ alias DangerConky='~/Scripts/danger_conky.sh'
 alias bc='btc'
 
 ## Games
+alias BBS-off='sudo modprobe bbswitch load_state=0 unload-state=1'
 alias cdX='cd ~/.local/share/feral-interactive/XCOM2/VFS/Local/my\ games/XCOM2/XComGame/Config/'
 alias cdX2='cd ~/.local/share/Steam/steamapps/common/XCOM\ 2/share/data/xcomgame'
 alias xcom2='cd ~/Dropbox/XCOM/Saves/XCOM2 && cp ~/.local/share/feral-interactive/XCOM2/VFS/Local/my\ games/XCOM2/XComGame/SaveData/* .'
@@ -354,6 +355,7 @@ alias FF-cam='mplayer -cache 256 -tv driver=v4l2:width=320:height=240 -vo xv tv:
 
 
 ## Net
+alias googs='googler $1'
 alias NM='sudo /etc/init.d/NetworkManager restart'
 alias WW='wicd-curses'
 alias hogs='sudo nethogs wlp6s0'
