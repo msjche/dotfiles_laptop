@@ -19,8 +19,9 @@
 .mpd/mpdstate
 .mpd/playlists/Main.m3u
 .mutt/com*
-Scripts/mps
 .mpd/playlists/default.m3u
+.newsbeuter/cache.db
+.newsbeuter/cache.db.lock
 .weechat/logs/*
 .weechat/script/
 .weechat/urlserver_list.txt
@@ -28,3 +29,4 @@ Scripts/mps
 .weechat/irc.conf
 .weechat/* 
 .oh-my-zsh/cache/*
+Scripts/mps
