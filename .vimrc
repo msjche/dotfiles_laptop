@@ -1,7 +1,14 @@
 set paste
 set pastetoggle=<F2>
 set rnu
-"set number
+set number
+set t_Co=256        	"set colors to 256
+syntax enable		"use syntax highlighting
+
+" Pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 let g:Powerline_symbols = "fancy"
 let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
@@ -41,21 +48,8 @@ colorscheme ir_black
 "colorscheme skittles_dark
 "colorscheme codeblocks_dark
 
-" Pathogen
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-set backspace=2       	" make backspace able to go over end of lines
-set t_Co=256        	"set colors to 256
-
-set backspace=indent,eol,start	"Set regular backspace during insert mode
-
-syntax enable			"use syntax highlighting
-
-
 " Tab stops
-	set tabstop=4    	" when you press tab, it will move forward 
+"	set tabstop=4    	" when you press tab, it will move forward 
 						" by 4 spaces
 " ----------------------------------------------------------------------
 	set shiftwidth=4 	" the number of spaces the >>, <<, >, and < 
