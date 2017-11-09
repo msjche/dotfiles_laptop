@@ -41,8 +41,6 @@ colorscheme ir_black
 "colorscheme skittles_dark
 "colorscheme codeblocks_dark
 
-let g:neodark#terminal_transparent = 1
-
 " Pathogen
 execute pathogen#infect()
 syntax on
