@@ -1,8 +1,7 @@
 set paste
 set pastetoggle=<F2>
-set mouse=a
-"set foldmethod=indent
 set rnu
+"set number
 
 let g:Powerline_symbols = "fancy"
 let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
@@ -49,22 +48,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set nocompatible        " don't use old settings that vi used.  
-						" Use the newer features that vim offers
-
-" Make the leader key be space
-let mapleader = "\<Space>"
-
 set backspace=2       	" make backspace able to go over end of lines
-set laststatus=2    	"always show the status line
 set t_Co=256        	"set colors to 256
 
-set number          	"show line number on side
-"set nornu           	"do not make the line numbers relative to cursor
-set mousehide       	"hide mouse cursor while typing
-set showmode        	"display the current mode
-set cursorline      	"highlight the current line
-set backspace=2			"make backspace able to go over end of lines
 set backspace=indent,eol,start	"Set regular backspace during insert mode
 
 syntax enable			"use syntax highlighting
@@ -81,49 +67,13 @@ syntax enable			"use syntax highlighting
 						" will delete the amount of spaces equal to 
 						" shiftwidth
 
-" Neo bundle stuff
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
-	call neobundle#begin(expand('~/.vim/bundle/'))
-		" Let NeoBundle manage NeoBundle (Required!)
-			NeoBundleFetch 'Shougo/neobundle.vim'
-		" Fuzzy finding for files
-			NeoBundle 'kien/ctrlp.vim'
-		"Move around easier
-			NeoBundle 'Lokaltog/vim-easymotion'
-		"File navigation
-			NeoBundle 'scrooloose/nerdtree'
-		"Coffeescript integration and syntax highlighting
-			NeoBundle 'kchmck/vim-coffee-script'
-		"Vim-Airline
-			NeoBundle 'vim-airline/vim-airline'
-"		"Vim-Airline-Themes
-"			NeoBundle 'vim-airline/vim-airline-themes'
-"		" Gotham theme
-"			NeoBundle 'whatyouhide/vim-gotham'
-
-	call neobundle#end()
-
-  filetype plugin indent on 			" Required:
-
-	 " If there are uninstalled bundles found on startup,
-	 " this will conveniently prompt you to install them.
-	 NeoBundleCheck
-
-
 " Key mappings
+	" Set Leader to Space
+		let mapleader = "\<Space>"
 
 	" I hate the Escape key
-		imap jj <Esc>
-
-	" easymotion <leader> remap
-	" Easymotion shortcut
-		map <leader>e <leader><leader>W
-		map <leader>e <leader><leader>W
-
-"	" space-n to open a new file (in a new tab)
-		nnoremap <leader>n :tabnew<cr>
-"	" space-t to open a new tab
-"		nnoremap <leader>t :tabnew<cr>
+		imap <leader>q \<Esc>
+		inoremap jj \<Esc>
 
 	" tab stuff
 		nnoremap tn :tabnew<cr>
@@ -132,40 +82,14 @@ syntax enable			"use syntax highlighting
 		nnoremap th :tabfirst<cr>
 		nnoremap tl :tablast<cr>
 
-
-	" <shift-tab> to go to next tab
-		nnoremap <s-tab> :tabnext<cr>
-		inoremap <s-tab> <esc>:tabnext<cr>
-
-	" <alt-q> to exit Insert	
-		inoremap <leader>j <esc>
-
-	" <c-shift-tab> to go to previous tab
-		nnoremap <c-s-tab> :tabprev<cr>
-		inoremap <c-s-tab> <esc>:tabprev<cr>
-
-	" space-f to open fuzzy file finder
-		nnoremap <leader>f :CtrlPClearCache<cr>:CtrlP .<cr>
-
-	" space-o to open the file browser
-		nnoremap <leader>o :NERDTreeToggle<cr>
-
 	" space-s to save
 		nnoremap <leader>s :w<cr>
 
-	" space-shift-s to save as
-		nnoremap <leader><s-s> :w 
-
 	" space-q to quit (doesn't save, watch out!)
 		nnoremap <leader>q :q!<cr>
+
+" Commenting
 	
-	" alt-x to Esc
-		inoremap <a-d> <esc>
-
-	" pageup and page down
-		nnoremap <leader>u :PageUp
-		nnoremap <leader>d :PageDown
-
 	" space-1 insert "!" commenting
 		nnoremap <leader>1 :norm i!<cr>
 		vnoremap <leader>1 :norm i!<cr>
@@ -188,11 +112,18 @@ syntax enable			"use syntax highlighting
 
 	" edit config files
 		nnoremap <leader>ez :tabnew ~/.zshrc<cr>
-	
-	" set relative number
-"	 	nnoremap <c-n> set rnu<cr>
-"	 	nnoremap <c-s-n> set number<cr>
 
+" Convenience
+	nmap G Gzz
+	nmap n nzz
+	nmap N Nzz
+
+" Quick pairs
+	imap <leader>' ''<ESC>i
+	imap <leader>" ""<ESC>i
+	imap <leader>( ()<ESC>i
+	imap <leader>[ {}<ESC>i
+	
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -203,16 +134,10 @@ endfunc
 
 nnoremap <c-n> :call NumberToggle()<cr>
 
-" Key mappings that might be new
-	" space-rv to reload vimrc
-		nnoremap <leader>rv :source<Space>$MYVIMRC<cr>
+" Reload vimrc
+	nnoremap <leader>rv :source<Space>$MYVIMRC<cr>
 
-	" space-ev to edit the vimrc file (think: edit-vim)
-		nnoremap <leader>ev :tabnew $MYVIMRC<cr>
-
-" Other keymappings to make the experience less painful
-  "make j and k keys go up normally instead of to the previous line number
-    nnoremap j gj
-    nnoremap k gk
+" Edit vimrc
+	nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 
 " vim: set ft=vim :
