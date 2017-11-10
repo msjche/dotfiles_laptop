@@ -46,10 +46,10 @@ URxvt.keysym.Control-Right:    \033[1;5C
 !URxvt.letterSpace: -1
 
 !!DejaVu Sans Big
-!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18:antialias=true:hinting=true
-!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=18:antialias=true
+!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=22:antialias=true
 !URxvt.letterSpace: -1
 
 !!DejaVu Sans
@@ -60,10 +60,10 @@ URxvt.keysym.Control-Right:    \033[1;5C
 !URxvt.letterSpace: -1
 
 !DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=18:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=18:antialias=true
+URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=22:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=22:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=22:antialias=true
 URxvt.letterSpace: -1
 
 !!Droid Sans
@@ -74,16 +74,16 @@ URxvt.letterSpace: -1
 !!URxvt.letterSpace: -2
 
 !!Droid Sans
-!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=18:antialias=true:hinting=true
-!URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=18:antialias=true
+!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=22:antialias=true
 
 !! Monofur
-!URxvt.font: xft:Monofur for Powerline:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldFont: xft:Monofur Bold for Powerline:pixelsize=18:antialias=true:hinting=true
-!URxvt.italicFont: xft:Monofur Italic for Powerline:pixelsize=18:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Monofur Bold for Powerline:italic:pixelsize=18:antialias=true
+!URxvt.font: xft:Monofur for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldFont: xft:Monofur Bold for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.italicFont: xft:Monofur Italic for Powerline:pixelsize=22:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Monofur Bold for Powerline:italic:pixelsize=22:antialias=true
 
 !! Anonymice
 !URxvt.font: xft:Anonymice Powerline:pixelsize=16:antialias=true:hinting=true
