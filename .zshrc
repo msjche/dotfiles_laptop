@@ -1,7 +1,8 @@
 #scratch# Oh-My-Zsh
 ZSH=/home/msjche/.oh-my-zsh
 #ZSH_THEME="powerline"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
-ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean candy gentoo terminalparty
+#ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean candy gentoo terminalparty
+ZSH_THEME="bira"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
@@ -20,6 +21,21 @@ ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean c
 #POWERLINE_GIT_UNMERGED="═"
 #POWERLINE_RIGHT_A_COLOR_FRONT="black"
 #POWERLINE_RIGHT_A_COLOR_BACK="red"
+
+# Colors.
+red='\e[0;31m'
+RED='\e[1;31m'
+green='\e[0;32m'
+GREEN='\e[1;32m'
+yellow='\e[0;33m'
+YELLOW='\e[1;33m'
+blue='\e[0;34m'
+BLUE='\e[1;34m'
+purple='\e[0;35m'
+PURPLE='\e[1;35m'
+cyan='\e[0;36m'
+CYAN='\e[1;36m'
+NC='\e[0m'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -780,4 +796,4 @@ clear
 #/home/msjche/Scripts/starwars.sh
 #/home/msjche/Scripts/batman.sh
 #/home/msjche/Scripts/invaders1.sh
-screenfetch -E
+#screenfetch -E
