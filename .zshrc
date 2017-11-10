@@ -1,7 +1,7 @@
 #scratch# Oh-My-Zsh
 ZSH=/home/msjche/.oh-my-zsh
-#ZSH_THEME="powerline"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
-ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean candy gentoo terminalparty
+ZSH_THEME="powerline"    #kardan agnoster af-magic bira clean candy gentoo terminalparty
+#ZSH_THEME="agnoster"    #bullet-train gnzh kardan agnoster af-magic bira clean candy gentoo terminalparty
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"

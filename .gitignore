@@ -22,6 +22,8 @@
 .mpd/playlists/default.m3u
 .newsbeuter/cache.db
 .newsbeuter/cache.db.lock
+.newsbeuter/pb-lock.pid
+.newsbeuter/queue
 .weechat/logs/*
 .weechat/script/
 .weechat/urlserver_list.txt
