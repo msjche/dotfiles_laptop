@@ -32,10 +32,10 @@ URxvt.keysym.Control-Left:    \033[1;5D
 URxvt.keysym.Control-Right:    \033[1;5C
 
 !!Hermit
-!URxvt*font: xft:Hermit:medium:size=12:antialiasing=true
-!URxvt*boldFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
-!URxvt*italicFont: xft:Hermit:medium:size=12:antialiasing=true:style=medium
-!URxvt*boldItalicFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+!URxvt*font: xft:Hermit:medium:size=16:antialiasing=true
+!URxvt*boldFont: xft:Hermit:bold:size=16:antialiasing=true:style=medium
+!URxvt*italicFont: xft:Hermit:medium:size=16:antialiasing=true:style=medium
+!URxvt*boldItalicFont: xft:Hermit:bold:size=16:antialiasing=true:style=medium
 !URxvt.letterSpace: -1
 
 !!Inconsolata
@@ -45,19 +45,20 @@ URxvt.keysym.Control-Right:    \033[1;5C
 !URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=16:antialias=true
 !URxvt.letterSpace: -1
 
-!DejaVu Sans Big
-URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=26:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=26:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=26:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=26:antialias=true
-URxvt.letterSpace: -1
-
-!!DejaVu Sans
-!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=11:antialias=true:hinting=true
-!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=11:antialias=true:hinting=true
-!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=11:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=11:antialias=true
+!!DejaVu Sans Big
+!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=24:antialias=true:hinting=true
+!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=24:antialias=true:hinting=true
+!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=24:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=24:antialias=true
 !URxvt.letterSpace: -1
+!URxvt.geometry: 120x47
+
+!DejaVu Sans
+URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true
+URxvt.letterSpace: -1
 
 !!DejaVu Sans
 !URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=22:antialias=true:hinting=true
