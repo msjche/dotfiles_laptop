@@ -24,7 +24,10 @@
 .newsbeuter/cache.db.lock
 .newsbeuter/pb-lock.pid
 .newsbeuter/queue
-.w3m/w3m*
+.w3m/w3mcache*
+.w3m/w3mtmp*
+.w3m/cookie
+.w3m/history
 .weechat/logs/*
 .weechat/script/
 .weechat/urlserver_list.txt
