@@ -32,17 +32,17 @@ URxvt.keysym.Control-Left:    \033[1;5D
 URxvt.keysym.Control-Right:    \033[1;5C
 
 !!Hermit
-!URxvt*font: xft:Hermit:medium:size=16:antialiasing=true
-!URxvt*boldFont: xft:Hermit:bold:size=16:antialiasing=true:style=medium
-!URxvt*italicFont: xft:Hermit:medium:size=16:antialiasing=true:style=medium
-!URxvt*boldItalicFont: xft:Hermit:bold:size=16:antialiasing=true:style=medium
+!URxvt*font: xft:Hermit:medium:size=18:antialiasing=true
+!URxvt*boldFont: xft:Hermit:bold:size=18:antialiasing=true:style=medium
+!URxvt*italicFont: xft:Hermit:medium:size=18:antialiasing=true:style=medium
+!URxvt*boldItalicFont: xft:Hermit:bold:size=18:antialiasing=true:style=medium
 !URxvt.letterSpace: -1
 
 !!Inconsolata
-!URxvt.font: xft:Inconsolata for Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldFont: xft:Inconsolata for Powerline:bold:pixelsize=16:antialias=true:hinting=true
-!URxvt.italicFont: xft:Inconsolata for Powerline:italic:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=16:antialias=true
+!URxvt.font: xft:Inconsolata for Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldFont: xft:Inconsolata for Powerline:bold:pixelsize=18:antialias=true:hinting=true
+!URxvt.italicFont: xft:Inconsolata for Powerline:italic:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=18:antialias=true
 !URxvt.letterSpace: -1
 
 !!DejaVu Sans Big
@@ -54,10 +54,10 @@ URxvt.keysym.Control-Right:    \033[1;5C
 !URxvt.geometry: 120x47
 
 !DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true
+URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=18:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=18:antialias=true
 URxvt.letterSpace: -1
 
 !!DejaVu Sans
@@ -87,17 +87,17 @@ URxvt.letterSpace: -1
 !URxvt.boldItalicFont: xft:Monofur Bold for Powerline:italic:pixelsize=22:antialias=true
 
 !! Anonymice
-!URxvt.font: xft:Anonymice Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldFont: xft:Anonymice Powerline Bold:pixelsize=16:antialias=true:hinting=true
-!URxvt.italicFont: xft:Anonymice Powerline Italic:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Anonymice Bold Italic:pixelsize=16:antialias=true
+!URxvt.font: xft:Anonymice Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldFont: xft:Anonymice Powerline Bold:pixelsize=18:antialias=true:hinting=true
+!URxvt.italicFont: xft:Anonymice Powerline Italic:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Anonymice Bold Italic:pixelsize=18:antialias=true
 !URxvt.letterSpace: -1
 
 !! Literation
-!URxvt.font: xft:Literation Mono Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldFont: xft:Literation Mono Bold for Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.italicFont: xft:Literation Mono Italic for Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Literation Mono Bold for Powerline:italic:pixelsize=16:antialias=true
+!URxvt.font: xft:Literation Mono Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldFont: xft:Literation Mono Bold for Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.italicFont: xft:Literation Mono Italic for Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Literation Mono Bold for Powerline:italic:pixelsize=18:antialias=true
 !URxvt.letterSpace: -1
 
 !! Sauce Code
@@ -108,10 +108,10 @@ URxvt.letterSpace: -1
 !!URxvt.letterSpace: -1
 
 !! Ubuntu Mono derivative
-!URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldFont: xft:Ubuntu Mono derivative Powerline Bold:pixelsize=16:antialias=true:hinting=true
-!URxvt.italicFont: xft:Ubuntu Mono derivative Powerline Italic:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:Ubuntu Mono derivative Bold Italic:pixelsize=16:antialias=true
+!URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldFont: xft:Ubuntu Mono derivative Powerline Bold:pixelsize=18:antialias=true:hinting=true
+!URxvt.italicFont: xft:Ubuntu Mono derivative Powerline Italic:pixelsize=18:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Ubuntu Mono derivative Bold Italic:pixelsize=18:antialias=true
 !!URxvt.letterSpace: -1
 
 

@@ -27,7 +27,7 @@
 .w3m/w3mcache*
 .w3m/w3mtmp*
 .w3m/w3mcookie*
-.w3m/cookie*
+.w3m/cookie
 .w3m/history
 .weechat/logs/*
 .weechat/script/
