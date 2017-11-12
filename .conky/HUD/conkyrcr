@@ -47,7 +47,8 @@ draw_graph_borders no
 draw_bar_borders no
 
 default_color DEDEDE
-color1 1793D0
+#color1 1793D0	#Arch blue
+color1 7A5ADA	#Gentoo purple
 color2 8C8C8C
 color3 ABABAB
 color4 C9C9C9
@@ -71,7 +72,7 @@ Public IP${alignr} NOPE;)
 Gateway IP #${alignr}$gw_ip
 DNS #${alignr}$nameserver
 TOR Status ${alignr}${if_running tor} Active${else}Disabled${endif}
-Firewall ${alignr}${exec systemctl status ufw | grep active | cut -c 11-27}
+#Firewall ${alignr}${exec systemctl status ufw | grep active | cut -c 11-27}
 Packets $alignr In:${tcp_portmon 1 32767 count}  Out: ${tcp_portmon 32768 61000 count}
 
 ${font Droid Sans:Bold:size=11}${alignc}${color7}NETWORK (WIRELESS) ${stippled_hr}$font$color
@@ -107,4 +108,5 @@ ${font Droid Sans:Bold:size=11}Outbound Connections:  ${tcp_portmon 32768 61000 
    ${tcp_portmon 32768 61000 rhost 13} ${alignr} ${tcp_portmon 32768 61000 rservice 13}
    ${tcp_portmon 32768 61000 rhost 14} ${alignr} ${tcp_portmon 32768 61000 rservice 14}
 
-${color orange}${font xirod:size=13}PACMAN LOG ${hr 2}$color$font ${execi 30 tail -n10 /var/log/pacman.log}
+${color1}${font xirod:size=13}PORTAGE LOG ${hr 2}$color$font
+${execi 30 tail -n10 /var/log/emerge.log}

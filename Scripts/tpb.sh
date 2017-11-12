@@ -14,7 +14,7 @@ program='/usr/bin/transmission-remote -a'
 TPB="https://thepiratebay.org"
 
 # show N first matches by default
-limit=50
+limit=25
 
 # colors
 numbcolor='\x1b[1;35m'
