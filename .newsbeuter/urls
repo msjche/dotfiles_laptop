@@ -1,12 +1,16 @@
 #Linux
-https://www.archlinux.org/feeds/news/                     "~Arch Linux News"
+https://www.archlinux.org/feeds/news/				"~Arch Linux News"
+https://wiki.archlinux.org/api.php?hidebots=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss	"~Arch Linux Wiki Updates"
+https://security.gentoo.org/glsa/feed.rss			"~Gentoo Security"
+https://bbs.linuxdistrocommunity.com/feeds/			"~Linux Distro Community"
 
-http://feeds.feedburner.com/computeractionshowvideo       "~Linux Action Show"
-http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml   "~Unfiltered"
-http://feeds.feedburner.com/scibytelarge                  "~SciByte"
-http://feeds.feedburner.com/PlanBVideo                    "~Plan B"
-http://feeds.feedburner.com/FreedomainRadioVolume6        "~Stefan Molyneux"
-http://joeroganexp.joerogan.libsynpro.com/irss            "~Joe Rogan Experience"
+http://feeds.feedburner.com/computeractionshowvideo		"~Linux Action Show"
+http://goinglinux.com/oggpodcast.xml				"~Going Linux"
+http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml		"~Unfiltered"
+http://feeds.feedburner.com/scibytelarge			"~SciByte"
+http://feeds.feedburner.com/PlanBVideo				"~Plan B"
+http://feeds.feedburner.com/FreedomainRadioVolume6       	"~Stefan Molyneux"
+http://joeroganexp.joerogan.libsynpro.com/irss           	"~Joe Rogan Experience"
 
 #Crossfit
-http://crossfitpodcast.com/feed/podcast/				  "~Crossfit Podcast"
+http://crossfitpodcast.com/feed/podcast/			"~Crossfit Podcast"

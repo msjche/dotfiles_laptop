@@ -33,7 +33,7 @@ own_window_argb_visual yes
 own_window_argb_value 0
 
 alignment top_left
-gap_y 35
+gap_y 55
 gap_x 90
 border_inner_margin 8
 draw_outline no
@@ -60,8 +60,8 @@ ${font xirod:Bold:size=30}${color1}GENTOO ${color}LINUX $font
 # SYS
 
 System Uptime $alignr $uptime
-User(s) $alignr $user_names
-Active Consoles $alignr $user_terms
+#User(s) $alignr $user_names
+#Active Consoles $alignr $user_terms
 $sysname $kernel $alignr $machine
 NVidia Optimus: $alignr${execi 60 cat /proc/acpi/bbswitch | awk '{print $2}'}
 #AC Status $alignr$acpiacadapter ${battery BAT1}
