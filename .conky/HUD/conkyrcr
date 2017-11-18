@@ -61,7 +61,7 @@ TEXT
 ${voffset 10}${color1}${goto 5}${font Liberation Sans:size=82}${time %H}${font Liberation Sans:size=38}${voffset -38}:${time %M}${font Liberation Sans:size=18}${voffset -19}${time %S}
 ${color2}${goto 130}${voffset 10}${font :size=11}${time %A}
 ${color3}${goto 130}${voffset 1}${font :size=10}${time %d %B %Y}
-${color2}${voffset -100}${font}${font Droid Sans Mono:size=13}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./ !d' | sed 's/$/ /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignr} /' | sed /" $DJS "/s/" $DJS "/" "'${font Droid Sans Mono:bold:size=14}${color7}'"$DJS"'${font Droid Sans Mono:size=13}${color2}'" "/}${font}
+${color2}${voffset -100}${font}${font Droid Sans Mono:size=13}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./ !d' | sed 's/$/ /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignr} /' | sed /" $DJS "/s/" $DJS "/" "'${font Droid Sans Mono:bold:size=14}${color1}'"$DJS"'${font Droid Sans Mono:size=13}${color2}$alignr'" "/}${font}
 # NETWORK
 ${font xirod:Bold:size=13}${color7}NETWORK ${hr 2}$font
 

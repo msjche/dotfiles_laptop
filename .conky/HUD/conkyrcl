@@ -34,7 +34,7 @@ own_window_argb_value 0
 
 alignment top_left
 gap_y 55
-gap_x 90
+gap_x 110
 border_inner_margin 8
 draw_outline no
 draw_borders no
@@ -72,7 +72,7 @@ Temp $alignr${exec sensors | grep Core\ 3 | awk '{print $3}'}
 #$alignr AUR: ${execp cat /tmp/aur.updates | wc -l}
 
 # CPU
-${font xirod:Bold:size=20}${color1}CPU${hr 2}$color$font
+${font xirod:Bold:size=20}${color1}CPU ${hr 2}$color$font
 ${color6}${cpubar cpu1}${color}$alignr${color6}${cpubar cpu2}${color}
 ${color6}${cpubar cpu3}${color}$alignr${color6}${cpubar cpu4}${color}
 ${color6}${cpubar cpu5}${color}$alignr${color6}${cpubar cpu6}${color}
