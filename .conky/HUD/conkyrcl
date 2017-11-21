@@ -76,22 +76,16 @@ ${color6}${cpubar cpu1}${color}$alignr${color6}${cpubar cpu2}${color}
 ${color6}${cpubar cpu3}${color}$alignr${color6}${cpubar cpu4}${color}
 ${color6}${cpubar cpu5}${color}$alignr${color6}${cpubar cpu6}${color}
 ${color6}${cpubar cpu7}${color}$alignr${color6}${cpubar cpu8}${color}
-${color6}${cpubar cpu9}${color}$alignr${color6}${cpubar cpu10}${color}
-${color6}${cpubar cpu11}${color}$alignr${color6}${cpubar cpu12}${color}
 ${font Droid Sans:size=8}
 Core 2${alignr}Core 2
-${cpugraph cpu1 30,230 000000 757575} ${alignr}${cpugraph cpu2 30,230 000000 757575}
+${cpugraph cpu1 45,230 000000 757575} ${alignr}${cpugraph cpu2 45,230 000000 757575}
 Core 3${alignr}Core 4
-${cpugraph cpu3 30,230 000000 757575} ${alignr}${cpugraph cpu4 30,230 000000 757575}
+${cpugraph cpu3 45,230 000000 757575} ${alignr}${cpugraph cpu4 45,230 000000 757575}
 Core 5${alignr}Core 6
-${cpugraph cpu4 30,230 000000 757575} ${alignr}${cpugraph cpu5 30,230 000000 757575}
+${cpugraph cpu4 45,230 000000 757575} ${alignr}${cpugraph cpu5 45,230 000000 757575}
 Core 7${alignr}Core 8
-${cpugraph cpu6 30,230 000000 757575} ${alignr}${cpugraph cpu7 30,230 000000 757575}
-Core 9${alignr}Core 10
-${cpugraph cpu6 30,230 000000 757575} ${alignr}${cpugraph cpu7 30,230 000000 757575}
-Core 11${alignr}Core 12
-${cpugraph cpu6 30,230 000000 757575} ${alignr}${cpugraph cpu7 30,230 000000 757575}
-$font
+${cpugraph cpu6 45,230 000000 757575} ${alignr}${cpugraph cpu7 45,230 000000 757575}
+
 # LOAD
 ${font xirod:Bold:size=20}${color1}LOAD ${hr 2}$font${color}
 ${font Droid Sans:bold:size=11}CPU ${hr 1}
@@ -123,6 +117,9 @@ ${color5}${font Droid Sans:bold:size=8}SWAP$font$color
 ${font xirod:Bold:size=20}${color1}DISKS ${hr 2}$font$color
 ${font Droid Sans:bold:size=11}${color5}/dev/sda ${color6}Read:$diskio_read Write:$diskio_write${color} $alignr ${execi 300 hddtemp /dev/sda | cut -c34-35}°C$color
 
+${font Droid Sans:bold:size=11}${color5}BOOT $font$font$alignr ${fs_type /boot}$font
+       ${color5}${fs_used /boot} / ${fs_size /boot} $alignr ${fs_used_perc /boot} %$color
+       ${color6}${fs_bar 14,450 /boot}$color
 ${font Droid Sans:bold:size=11}${color5}ROOT $font$font$alignr ${fs_type /}$font
        ${color5}${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %$color
        ${color6}${fs_bar 14,450 /}$color
