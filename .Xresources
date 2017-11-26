@@ -23,7 +23,7 @@ urxvt*depth:32
 urxvt*foreground:#ADADAD
 urxvt*background:rgba:0600/0600/0600/dddd
 URxvt.foreground: 15
-URxvt.geometry: 155x50
+URxvt.geometry: 145x55
 
 ! Ctrl-Tab, Ctrl-Shift-Tab and other bindings in urxvt
 URxvt.keysym.Control-Up:   \033[1;5A
@@ -127,7 +127,7 @@ URxvt.keysym.M-s           	: perl:keyboard-select:search
 URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
 !URxvt.perl-ext-common     	: tabbed,default,matcher
 !Urxvt.perl-lib            	: /usr/lib/urxvt/perl/
-URxvt.url-select.launcher  	: qutebrowser
+URxvt.url-select.launcher  	: luakit
 URxvt.url-select.autocopy  	: true
 URxvt.url-select.underline 	: true
 

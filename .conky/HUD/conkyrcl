@@ -72,22 +72,32 @@ Temp $alignr${exec sensors | grep Core\ 3 | awk '{print $3}'}
 
 # CPU
 ${font xirod:Bold:size=20}${color1}CPU ${hr 2}$color$font
-${color6}${cpubar cpu1}${color}$alignr${color6}${cpubar cpu2}${color}
-${color6}${cpubar cpu3}${color}$alignr${color6}${cpubar cpu4}${color}
-${color6}${cpubar cpu5}${color}$alignr${color6}${cpubar cpu6}${color}
-${color6}${cpubar cpu7}${color}$alignr${color6}${cpubar cpu8}${color}
-${font Droid Sans:size=8}
-Core 2${alignr}Core 2
+
+#${color6}${cpubar cpu1}${color}$alignr${color6}${cpubar cpu2}${color}
+#${color6}${cpubar cpu3}${color}$alignr${color6}${cpubar cpu4}${color}
+#${color6}${cpubar cpu5}${color}$alignr${color6}${cpubar cpu6}${color}
+#${color6}${cpubar cpu7}${color}$alignr${color6}${cpubar cpu8}${color}
+${color}CPU 1 : $color6${cpu cpu1}% ${goto 100}$color1${cpubar cpu1 12,150}  \
+${color}CPU 5 : ${alignr}$color6${cpu cpu5}% $color1${cpubar cpu5 12,150}
+${color}CPU 2 : $color6${cpu cpu2}% ${goto 100}$color1${cpubar cpu2 12,150}  \
+${color}CPU 6 : ${alignr}$color6${cpu cpu6}% $color1${cpubar cpu6 12,150}
+${color}CPU 3 : $color6${cpu cpu3}% ${goto 100}$color1${cpubar cpu3 12,150}  \
+${color}CPU 7 : ${alignr}$color6${cpu cpu7}% $color1${cpubar cpu7 12,150}
+${color}CPU 4 : $color6${cpu cpu4}% ${goto 100}$color1${cpubar cpu4 12,150}  \
+${color}CPU 8 : ${alignr}$color6${cpu cpu8}% $color1${cpubar cpu8 12,150}$color
+
+#Core 2${alignr}Core 2
 ${cpugraph cpu1 45,230 000000 757575} ${alignr}${cpugraph cpu2 45,230 000000 757575}
-Core 3${alignr}Core 4
+#Core 3${alignr}Core 4
 ${cpugraph cpu3 45,230 000000 757575} ${alignr}${cpugraph cpu4 45,230 000000 757575}
-Core 5${alignr}Core 6
+#Core 5${alignr}Core 6
 ${cpugraph cpu4 45,230 000000 757575} ${alignr}${cpugraph cpu5 45,230 000000 757575}
-Core 7${alignr}Core 8
+#Core 7${alignr}Core 8
 ${cpugraph cpu6 45,230 000000 757575} ${alignr}${cpugraph cpu7 45,230 000000 757575}
 
 # LOAD
 ${font xirod:Bold:size=20}${color1}LOAD ${hr 2}$font${color}
+
 ${font Droid Sans:bold:size=11}CPU ${hr 1}
        ${running_processes} / $processes ${goto 260}(%) PID${goto 362}CPU $alignr MEM$font
        ${font Droid Sans:bold:size=11}${color2}${top name 1}${goto 265}${top pid 1}${goto 355}${top cpu 1}$alignr${top mem 1}${color}$font
@@ -106,6 +116,7 @@ ${goto 260}(%) PID${goto 360}MEM${alignr}CPU$font
 
 # MEMORY
 ${font xirod:Bold:size=20}${color1}MEMORY ${hr 2}$color$font
+
 ${color5}${font Droid Sans:bold:size=11}RAM$font$color
        $mem / $memmax $alignr $memperc %
        ${color6}${membar 14,450 /}$color
@@ -115,6 +126,7 @@ ${color5}${font Droid Sans:bold:size=8}SWAP$font$color
 
 # HDD
 ${font xirod:Bold:size=20}${color1}DISKS ${hr 2}$font$color
+
 ${font Droid Sans:bold:size=11}${color5}/dev/sda ${color6}Read:$diskio_read Write:$diskio_write${color} $alignr ${execi 300 hddtemp /dev/sda | cut -c34-35}°C$color
 
 ${font Droid Sans:bold:size=11}${color5}BOOT $font$font$alignr ${fs_type /boot}$font
