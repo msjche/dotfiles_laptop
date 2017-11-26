@@ -120,7 +120,7 @@ ${font xirod:Bold:size=20}${color1}MEMORY ${hr 2}$color$font
 ${color5}${font Droid Sans:bold:size=11}RAM$font$color
        $mem / $memmax $alignr $memperc %
        ${color6}${membar 14,450 /}$color
-${color5}${font Droid Sans:bold:size=8}SWAP$font$color
+${color5}${font Droid Sans:bold:size=11}SWAP$font$color
        $swap / $swapmax $alignr $swapperc %
        ${color6}${swapbar 14,450 /}$color
 
