@@ -91,9 +91,9 @@ ${cpugraph cpu1 45,230 000000 757575} ${alignr}${cpugraph cpu2 45,230 000000 757
 #Core 3${alignr}Core 4
 ${cpugraph cpu3 45,230 000000 757575} ${alignr}${cpugraph cpu4 45,230 000000 757575}
 #Core 5${alignr}Core 6
-${cpugraph cpu4 45,230 000000 757575} ${alignr}${cpugraph cpu5 45,230 000000 757575}
+${cpugraph cpu5 45,230 000000 757575} ${alignr}${cpugraph cpu6 45,230 000000 757575}
 #Core 7${alignr}Core 8
-${cpugraph cpu6 45,230 000000 757575} ${alignr}${cpugraph cpu7 45,230 000000 757575}
+${cpugraph cpu7 45,230 000000 757575} ${alignr}${cpugraph cpu8 45,230 000000 757575}
 
 # LOAD
 ${font xirod:Bold:size=20}${color1}LOAD ${hr 2}$font${color}
