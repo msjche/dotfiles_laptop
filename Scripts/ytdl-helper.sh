@@ -15,4 +15,5 @@ read format
 echo "downloading video..."
 youtube-dl -v -f $format -o "%(title)s.%(ext)s" $video
 echo "download complete."
-mplayer ~/Downloads/Youtube/"%(title)s.%(ext)s"
+#mpv ~/Downloads/YouTube/"%(title)s.%(ext)s"
+mpv ~/Downloads/YouTube/"$filename"
