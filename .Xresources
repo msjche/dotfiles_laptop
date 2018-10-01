@@ -23,7 +23,7 @@ urxvt*depth:32
 urxvt*foreground:#ADADAD
 urxvt*background:rgba:0600/0600/0600/dddd
 URxvt.foreground: 15
-URxvt.geometry: 145x55
+URxvt.geometry: 145x50
 
 ! Ctrl-Tab, Ctrl-Shift-Tab and other bindings in urxvt
 URxvt.keysym.Control-Up:   \033[1;5A
@@ -117,9 +117,9 @@ URxvt.letterSpace: -1
 ! Disable screen printing by overriding the default print pipe.
 URxvt.print-pipe: "cat >/dev/null"
 
-URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+URxvt.perl-ext-common : default,matcher,keyboard-select,url-select,clipboard,resize-font
 
-URxvt.keysym.M-x           	: perl:keyboard-select:activate
+URxvt.keysym.M-Escape          	: perl:keyboard-select:activate
 URxvt.keysym.M-u           	: perl:url-select:select_next
 URxvt.keysym.M-c           	: perl:clipboard:copy
 URxvt.keysym.M-v           	: perl:clipboard:paste
@@ -130,14 +130,10 @@ URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
 URxvt.url-select.launcher  	: luakit
 URxvt.url-select.autocopy  	: true
 URxvt.url-select.underline 	: true
+URxvt.resize-font.smaller	: M-k
+URxvt.resize-font.bigger	: M-j
 
 URxvt.url-select.button:   1
-
-!URxvt.clipboard.copycmd:  xsel --input  --clipboard
-!URxvt.clipboard.pastecmd: xsel --output --clipboard
-
-!URxvt.keysym.Control-Shift-C: perl:clipboard:copy
-!URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 
 ! Black
 URxvt.color0:  #5c5c5c
