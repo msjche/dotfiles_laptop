@@ -21,7 +21,8 @@ URxvt.scrollTtyKeypress: true
 
 urxvt*depth:32
 urxvt*foreground:#ADADAD
-urxvt*background:rgba:0600/0600/0600/dddd
+!urxvt*background:rgba:0600/0600/0600/dddd
+urxvt.background: [90]#000000
 URxvt.foreground: 15
 URxvt.geometry: 145x50
 
@@ -127,7 +128,7 @@ URxvt.keysym.M-s           	: perl:keyboard-select:search
 URxvt.keysym.M-C-v         	: perl:clipboard:paste_escaped
 !URxvt.perl-ext-common     	: tabbed,default,matcher
 !Urxvt.perl-lib            	: /usr/lib/urxvt/perl/
-URxvt.url-select.launcher  	: luakit
+URxvt.url-select.launcher  	: qutebrowser
 URxvt.url-select.autocopy  	: true
 URxvt.url-select.underline 	: true
 URxvt.resize-font.smaller	: M-k
